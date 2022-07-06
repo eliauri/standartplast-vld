@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Stp - шумоизоляция автомобилей во Владикавказе</title>
+  <link rel="preload" href="fonts/OpenSansSemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="lending-page">
+      @include('partials/breadcrumb.html')
+      <section class="product">
+        <div class="product__wrapper container">
+          <div class="product__top">
+            <div class="swiper product__photo">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/product.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/product.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/product.jpg" alt=""></div>
+              </div>
+              <div class="swiper-pagination product__pagination "></div>
+            </div>
+            <div class="product__info">
+              <div class="products__technology --products__technology-profi">Profi</div>
+              <h1 class="product__title">StP Profi Light</h1>
+              <div class="product__property">
+                <span class="product__param">Толщина</span>
+                <span class="product__value">1.5&nbsp;мм</span>
+              </div>
+              <div class="product__property">
+                <span class="product__param">Размер</span>
+                <span class="product__value">0.35×0.57&nbsp;м (+_10мм)</span>
+              </div>
+              <p class="product__description">
+                Высокоэффективный звукоизоляционный многослойный материал на основе вязкоэластичного вспененного
+                полиуретана. Объединяет в себе функции звукопоглощения и звукоизоляции.
+              </p>
+              <div class="product__price-line">
+                <div class="product__zones">
+                  Зона обработки: <span>Багажник, Пол</span>
+                </div>
+                <div class="product__price">145 руб</div>
+              </div>
+            </div>
+          </div>
+          <div class="product__bottom">
+            <div class="product__characteristic characteristic">
+              <h2 class="characteristic__title">Описание товара</h2>
+              <div class="characteristic__wrapper" accordion-content>
+                <div class="characteristic__info" >
+                  <div class="characteristic__block">
+                    <h3 class="characteristic__sub-title">Состав материала</h3>
+                    <ul class="characteristic__desc">
+                      <li>Лицевое покрытие Soft</li>
+                      <li>Мастичный слой-2мм</li>
+                      <li>Вязкоэластичный вспененный полиуретан-5мм</li>
+                      <li>Клеевой слой</li>
+                      <li>Защитная антиадгезионная бумага</li>
+                    </ul>
+                  </div>
+                  <div class="characteristic__block">
+                    <h3 class="characteristic__sub-title">Преимущества</h3>
+                    <ul class="characteristic__desc">
+                      <li>Уникальный состав</li>
+                      <li>Сокращение времени обработки автомобиля</li>
+                      <li>Высокий уровень звукоизоляции (особенно на низких частотах)</li>
+                      <li>Исключают проникновение влаги</li>
+                      <li>Высокая степень адгезии к вибропоглощающему слою</li>
+                      <li>Эффективный энергопоглощающий слой материала</li>
+                      <li>Удобен в монтаже</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="product__characteristic characteristic">
+              <h2 class="characteristic__title">Технические характеристики</h2>
+              <div class="characteristic__wrapper" accordion-content>
+                <div class="characteristic__info ">
+                  <ul class="characteristic__tech">
+                    <li><span class="characteristic__param"> Толщина листа, мм</span><span class="tt"></span><span class="characteristic__value">7</span>
+                    </li>
+                    <li><span class="characteristic__param">Размер листа, м</span><span class="tt"></span><span
+                        class="characteristic__value">0,75х0,47</span></li>
+                    <li><span class="characteristic__param">Площадь листа, м²</span><span class="tt"></span><span
+                        class="characteristic__value">0,35</span></li>
+                    <li><span class="characteristic__param">Масса на м²</span><span class="tt"></span><span class="characteristic__value">кг не менее
+                        4,0</span></li>
+                    <li><span class="characteristic__param">Масса листа, кг </span><span class="tt"></span><span class="characteristic__value">
+                        1,41</span></li>
+                    <li><span class="characteristic__param">Индекс изоляции воздушного шума, дБ</span><span class="tt"></span><span
+                        class="characteristic__value">31</span></li>
+                    <li><span class="characteristic__param">Температурный диапазон использования, °C</span><span class="tt"></span><span
+                        class="characteristic__value">от -30 до +80</span></li>
+                    <li><span class="characteristic__param">Количество листов в упаковке, шт</span><span class="tt"></span><span
+                        class="characteristic__value">10</span></li>
+                  </ul>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+  </div>
+  </section>
+  </main>
+  @include('partials/footer.html')
+  <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>

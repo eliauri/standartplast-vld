@@ -1,0 +1,331 @@
+.header {
+  background-color: #141414;
+  color: #fff;
+  position: relative;
+}
+
+.header a {
+  // color: #fff;
+}
+.header-top{
+  display: flex;
+  justify-content: space-between;
+}
+.header__adress {
+  padding: 10px 0;
+  background-color: #1F1F1F;
+  color: #C2C2C2;
+  font-weight: 600;
+}
+
+.header__adress a {
+  color: #C2C2C2;
+  font-weight: 600;
+}
+
+.header__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__company-name {
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #EC1E27;
+  font-weight: 700;
+  font-size: 1.25rem;
+
+  span {
+    display: block;
+    color: #fff;
+    font-size: 0.85rem;
+    line-height: 1rem;
+  }
+}
+
+.header__nav {
+  font-family: 'OpenSans';
+
+  ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    padding: 35px 0;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover .sub-menu {
+      display: block;
+      animation: fade .4s ease-in-out;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  a {
+    transition: all 0.2s;
+    color: #fff;
+    display: block;
+
+    &:hover {
+      color: #C2C2C2;
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 20px 30px;
+    background-color: #141414;
+    // box-shadow: 0 5px 7px rgba(236, 30, 39, 0.25);
+    z-index: 100;
+
+    li {
+      padding: 5px 0;
+    }
+  }
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.header__contact-line{
+  display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.header__instagram {
+  transition: all 0.4s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.header__phone {
+  font-weight: 600;
+  transition: all 0.2s;
+  color: #C2C2C2;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+@include for-desktop {
+  .header__nav li:not(:last-child) {
+    margin-right: 20px;
+  }
+  .header__contact {
+
+    gap: 2px;
+  }
+}
+
+@include tablet {
+  .header__logo img {
+    width: 40px;
+  }
+
+  .header__company-name {
+    line-height: 14px;
+  }
+
+  .header__logo {
+    gap: 5px;
+  }
+
+
+  .header__nav a {
+    font-size: 0.9rem;
+ }
+}
+
+.header__adress--mobile {
+  display: none;
+  padding: 10px 0;
+  background-color: #1F1F1F;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+}
+
+@include small-tablet {
+  .header__adress {
+    display: none;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__contact {
+    display: none;
+  }
+
+  .header__adress--mobile .header__contact {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .header__adress--mobile {
+    display: block;
+  }
+
+  .header__company-name {
+    line-height: 22px;
+  }
+
+  .header__logo img {
+    width: auto;
+  }
+
+  .header__logo {
+    gap: 10px;
+  }
+  .title--main{
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+}
+@include  mobile{
+  .header__contact{
+    align-items: flex-start;
+  }
+  .header__contact-line{
+    gap: 5px;
+  }
+}
+@media (max-width:(380px)) {
+  .header__adress--mobile .header__contact{
+    display: flex;
+    // flex-direction: column;
+  }
+  .header__phone{
+    font-size: 0.9rem;
+  }
+}
+.burger {
+  @include burger;
+}
+.burger--active ~  html {
+  overflow-y: hidden;
+}
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #141414;
+  z-index: 100;
+  width: 100%;
+  height: 85vh;
+
+  &.menu--active {
+    display: block;
+    overflow: auto;
+    .menu__list{
+      display: block;
+      opacity: 0;
+      padding: 0;
+      list-style: none;
+        animation-name: slideEffect;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.1s;
+    }
+    .footer__nav{
+    margin-right: 0;
+    animation-name: slideEffect;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
+    opacity: 0;
+    padding: 0;
+    .footer__title{
+      margin-bottom: 15px;
+    }
+    .footer__social {
+      gap: 0px;
+  }
+    }
+  }
+
+  .sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s;
+    list-style: none;
+    padding-left: 10px;
+   a{
+     padding: 5px 0;
+     font-size: 1.4rem;
+     color: #C2C2C2;
+   }
+  }
+ .menu-item-has-children.active{
+   padding-bottom: 10px;
+ }
+  a {
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 8px 0;
+    display: block;
+  }
+}
+
+.menu__wrapper {
+  display: flex;
+ flex-direction: column;
+height: 85%;
+
+}
+
+
+@keyframes slideEffect {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
